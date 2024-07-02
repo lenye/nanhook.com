@@ -1,5 +1,6 @@
 baseURL: https://nanhook.com
 title: 'Webhook Cloud Services'
+languageCode: "zh-cn"
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 

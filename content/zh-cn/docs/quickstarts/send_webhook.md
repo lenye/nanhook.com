@@ -1,19 +1,19 @@
 ---
-title: '接收 webhook'
-date: 2024-06-28T17:17:00+08:00
-weight: 10
+title: '发送 webhook'
+date: 2024-07-02T16:50:00+08:00
+weight: 20
 ---
 
-在这里，学习如何使用 `nanhook` 接收第一个 webhook 事件。
+在这里，学习如何使用 `nanhook` 将 webhook 事件发送到用户的终点。
 
-入口可以是第三方服务商，例如支付宝、企业微信、github，也可以是其他服务触发的 webhook 事件。
+终点可以是第三方服务商，例如企业微信群机器人、飞书自定义机器人、钉钉自定义机器人，也可以是触发其他服务的 webhook 事件。
 
-![](/docs/quickstarts/receive_webhook.png)
+![](/docs/quickstarts/send_webhook.png)
 
 #### 准备工作
 
-* `nanhook cloud` 帐户。如果您没有帐户，可以在[此处创建一个帐户](https://dashboard.nanhook.com/login)。
-* 用于接收 webhook 事件的终点 api。
+* `nanhook Cloud` 帐户。如果您没有帐户，可以在[此处创建一个帐户](https://dashboard.nanhook.com/login)。
+* 用于接收 webhook 事件的后端终点。
 
 #### 步骤：
 
