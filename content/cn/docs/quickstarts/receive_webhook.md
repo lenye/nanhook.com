@@ -6,13 +6,13 @@ weight: 10
 
 在这里，学习如何使用 `nanhook` 接收第一个 webhook 事件。
 
-入口可以是第三方服务商，例如支付宝、企业微信、github，也可以是其他服务触发的 webhook 事件。
+入口可以是第三方服务商，例如企业微信、github，也可以是其他服务触发的 webhook 事件。
 
 ![](/docs/quickstarts/receive_webhook.png)
 
 #### 准备工作
 
-* `nanhook cloud` 帐户。如果您没有帐户，可以在[此处创建一个帐户](https://dashboard.nanhook.com/login)。
+* `nanhook cloud` 帐户。如果您没有帐户，请登录 `控制台` ，[创建一个帐户](https://dashboard.nanhook.com/login)。
 * 用于接收 webhook 事件的终点 api。
 
 #### 步骤：
@@ -24,5 +24,4 @@ weight: 10
 1. 新增路由，连接“入口”和“终点”。
     * 路由是入口、终点和可选规则组成的，它定义了 webhook 的数据流程，从收件到派送到终点。
 
-就这样，发往入口网址的所有 webhook
-事件现在都将传递到路由对应的终点，并可从 `nanhook` [后台查看](https://dashboard.nanhook.com/observability/requests)。
+就这样，发往入口网址的所有 webhook 事件现在都将传递到路由对应的终点，详细日志可以在[控制台查看](https://dashboard.nanhook.com/observability/requests)。
