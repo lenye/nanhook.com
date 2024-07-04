@@ -1,12 +1,11 @@
-baseURL: https://nanhook.com
-title: 'Webhook Cloud Services'
-languageCode: "zh-cn"
+baseURL: "https://www.nanhook.com"
+title: "Webhook Cloud Services"
+languageCode: "zh-CN"
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu
 
 # Language settings
-contentDir: content/zh-cn
-defaultContentLanguage: zh-cn
+defaultContentLanguage: "zh-CN"
 defaultContentLanguageInSubdir: false
 # Useful when translating.
 enableMissingTranslationPlaceholders: true
@@ -48,16 +47,18 @@ menu:
     - name: "控制台"
       weight: 40
       url: "https://dashboard.nanhook.com"
-      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs"
-        aria-hidden="true"></i></sup>
+      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs" aria-hidden="true"></i></sup>
 
 # Language configuration
 languages:
-  zh-cn:
-    languageName: 中文
-    title: 'Webhook Cloud Services'
+  zh-CN:
+    languageCode: "zh-CN"
+    languageName: "中文"
+    contentDir: "content/cn"
+    title: "Webhook Cloud Services"
     params:
-      description: 'Webhook Cloud Services'
+      description: "管理、监控和测试你的 webhook 事件"
+      dateFormat: "2006-01-02 15:04:05 +0800"
 
 markup:
   goldmark:
@@ -159,7 +160,7 @@ module:
   # workspace: docsy.work
   hugoVersion:
     extended: true
-    min: 0.128.0
+    min: 0.128.1
   imports:
     - path: github.com/google/docsy
       disable: false
