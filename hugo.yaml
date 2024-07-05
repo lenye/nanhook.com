@@ -58,7 +58,6 @@ languages:
     title: "Webhook Cloud Services"
     params:
       description: "管理、监控和测试你的 webhook 事件"
-      dateFormat: "2006-01-02 15:04:05 +0800"
 
 markup:
   goldmark:
@@ -90,7 +89,9 @@ params:
     # set taxonomyPageHeader = [] to hide taxonomies on the page headers
     taxonomyPageHeader: [ tags, categories ]
 
-  privacy_policy: https://nanhook.com/privacy
+  dateFormat: "2006-01-02 15:04:05 +0800"
+
+  privacy_policy: /privacy
 
   # First one is picked as the Twitter card image if not set on page.
   # images: [images/project-illustration.png]

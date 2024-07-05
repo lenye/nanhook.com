@@ -1,6 +1,6 @@
 ---
-title: 简介
-linkTitle: 文档
+title: "简介"
+linkTitle: "文档"
 menu: {main: {weight: 20}}
 ---
 
