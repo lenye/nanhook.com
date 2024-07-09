@@ -47,7 +47,7 @@ X-Nanhook-Source-Verify          入口是否身份验证
 
 `nanhook` 支持的通用身份验证选项：基本身份验证 `Basic Auth`、`API Key` 和 `Bearer Token`，涵盖了大多数身份验证需求。
 此外，`nanhook` 还内置支持许多第三方服务商的身份验证。
-有关第三方服务商的完整列表，请参阅[终点第三方身份验证提供商](/docs/manual/authentication#endpoint)。
+有关第三方服务商的完整列表，请参阅[终点第三方身份验证提供商](/docs/manual/authentication)。
 
 配置终点请求的身份验证:
 
