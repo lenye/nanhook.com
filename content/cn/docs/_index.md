@@ -13,7 +13,7 @@ Webhook 是一种基于 HTTP 的回调函数，可在 2 个应用编程接口（
 
 ## nanhook
 
-`nanhook` 是一个 webhook 异步网关，轻松管理、监控和测试你的 webhook 事件，助力你掌控事件全流程。
+`nanhook` 是一个 webhook 异步网关，轻松管理、监控和测试你的 webhook 事件，助力你掌控数据全流程。
 
 * 订阅事件，注册 webhook：创建端点，托管入口，注册路由，支持发送和接收多个 webhook 事件。
 * 安全连接：使用 HTTPS 以确保数据加密且被安全传输，保护你的 webhook。

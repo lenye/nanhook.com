@@ -1,4 +1,4 @@
-baseURL: "https://www.nanhook.com"
+baseURL: "https://nanhook.com"
 title: "Webhook Cloud Services"
 languageCode: "zh-CN"
 
@@ -16,7 +16,7 @@ enableRobotsTXT: true
 enableGitInfo: false
 
 # Comment out to enable taxonomies in Docsy
-# disableKinds: [taxonomy, taxonomyTerm]
+disableKinds: [taxonomy, taxonomyTerm]
 
 # You can add your own taxonomies
 taxonomies:
@@ -47,7 +47,7 @@ menu:
     - name: "控制台"
       weight: 40
       url: "https://dashboard.nanhook.com"
-      post: <sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs" aria-hidden="true"></i></sup>
+      post: '<sup><i class="ps-1 fa-solid fa-up-right-from-square fa-xs" aria-hidden="true"></i></sup>'
 
 # Language configuration
 languages:
@@ -91,7 +91,7 @@ params:
 
   dateFormat: "2006-01-02 15:04:05 +0800"
 
-  privacy_policy: /privacy
+#  privacy_policy: "/privacy"
 
   # First one is picked as the Twitter card image if not set on page.
   # images: [images/project-illustration.png]
@@ -106,7 +106,7 @@ params:
   archived_version: false
 
   # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-  github_repo: https://github.com/lenye/nanhook_docs
+  github_repo: "https://github.com/lenye/nanhook.com"
 
   # Specify a value here if your content directory is not in your repo's root directory
   # github_subdir: ""
@@ -125,7 +125,7 @@ params:
   prism_syntax_highlighting: false
 
   copyright:
-    authors: The Nanhook Authors
+    authors: "Nanhook Authors"
   #    from_year: 2024
 
   # User interface configuration
@@ -141,7 +141,6 @@ params:
     sidebar_menu_compact: false
     # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
     sidebar_search_disable: false
-
     # Adds a reading time to the top of each doc.
     # If you want this feature, but occasionally need to remove the Reading time from a single page,
     # add "hide_readingtime: true" to the page's front matter
@@ -152,16 +151,15 @@ params:
     # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
     developer:
       - name: GitHub
-        url: https://github.com/lenye/nanhook_docs
-        icon: fab fa-github
-        desc: 文档
+        url: "https://github.com/lenye/nanhook.com"
+        icon: "fab fa-github"
 
 module:
   # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
   # workspace: docsy.work
   hugoVersion:
     extended: true
-    min: 0.128.1
+    min: 0.128.2
   imports:
-    - path: github.com/google/docsy
+    - path: "github.com/google/docsy"
       disable: false
