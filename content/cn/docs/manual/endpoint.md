@@ -31,7 +31,7 @@ weight: 20
     </tr>
     <tr>
         <td>X-Nanhook-Connecting-Ip</td>
-        <td>发送到入口请求的客户端的 IP</td>
+        <td>连接到入口的客户端 IP</td>
     </tr>
     <tr>
         <td>X-Nanhook-Source-Id</td>
