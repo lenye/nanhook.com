@@ -13,16 +13,48 @@ weight: 20
 
 `终点网址` 不是第三方服务商时，除了请求的原始标头之外，`nanhook` 还添加了以下标头：
 
-```
-X-Nanhook-Trace-Id               追踪 id，用于调试和故障排除
-X-Nanhook-Attempt-Count          派送尝试计数
-X-Nanhook-Connecting-Ip          发送到入口请求的客户端的 IP
-X-Nanhook-Source-Id              入口 id
-X-Nanhook-Source-Http-Method     入口的 http 请求方法
-X-Nanhook-Source-Url-Path        入口的 url path
-X-Nanhook-Source-Url-Query       入口的 url query 参数
-X-Nanhook-Source-Verify          入口是否身份验证
-```
+<table>
+  <thead>
+    <tr>
+      <th>header</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>X-Nanhook-Trace-Id</td>
+        <td>追踪 id，用于调试和故障排除</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Attempt-Count</td>
+        <td>派送尝试计数</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Connecting-Ip</td>
+        <td>发送到入口请求的客户端的 IP</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Source-Id</td>
+        <td>入口 id</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Source-Http-Method</td>
+        <td>入口的 http 请求方法</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Source-Url-Path</td>
+        <td>入口的 url path</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Source-Url-Query</td>
+        <td>入口的 url query 参数</td>
+    </tr>
+    <tr>
+        <td>X-Nanhook-Source-Verify</td>
+        <td>入口是否身份验证</td>
+    </tr>
+  </tbody>
+</table>
 
 ### HTTP Response
 
