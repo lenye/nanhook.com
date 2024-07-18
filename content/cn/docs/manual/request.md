@@ -14,7 +14,7 @@ weight: 50
 
 对于每个请求，请求`详情`会显示请求和响应数据：header, path, query, body。
 
-### 请求驳回
+### 采纳
 
 <table>
   <thead>
@@ -24,6 +24,31 @@ weight: 50
     </tr>
   </thead>
   <tbody>
+    <tr>
+        <td>成功</td>
+        <td>请求成功，创建事件</td>
+    </tr>
+    <tr>
+        <td>验证</td>
+        <td>一次性验证请求，不创建事件</td>
+    </tr>
+  </tbody>
+</table>
+
+### 驳回
+
+<table>
+  <thead>
+    <tr>
+      <th>状态</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>重复</td>
+        <td>重复请求</td>
+    </tr>
     <tr>
         <td>禁用</td>
         <td>入口不可用</td>
