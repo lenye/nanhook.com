@@ -1,3 +1,9 @@
-# nanhook_docs
+# nanhook.com docs
 
-Webhook 异步网关，轻松管理、监控和测试你的 webhook 事件，助力你掌控事件全流程。 
+Webhook 异步网关，轻松管理、监控和测试你的 webhook 事件，助力你掌控数据全流程
+
+* 订阅事件，注册 webhook：创建端点，托管入口，注册路由，支持发送和接收多个 webhook 事件。
+* 安全连接：使用 HTTPS 以确保数据加密且被安全传输，保护你的 webhook。
+* 验证 webhook：实施验证方法，以确认传入的数据来自受信任的来源。
+* 错误处理：将系统设计为优雅地处理故障，包括重试和不成功的 webhook 交付的警报。
+* 监控和记录 webhook：维护 webhook 活动的详细日志，以便于调试并为数据流提供审计跟踪。
