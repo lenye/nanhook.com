@@ -21,6 +21,7 @@ weight: 40
 
 * [微信测试号](https://developers.weixin.qq.com/doc/offiaccount/Basic_Information/Access_Overview.html)
 * [企业微信](https://developer.work.weixin.qq.com/document/10514)
+* [抖店（测试）](https://op.jinritemai.com/docs/guide-docs/215/1977)
 * [码云 gitee](https://gitee.com/help/articles/4290)
 * [Github](https://docs.github.com/zh/webhooks/using-webhooks/validating-webhook-deliveries)
 
