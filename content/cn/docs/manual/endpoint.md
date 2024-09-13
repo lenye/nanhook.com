@@ -8,34 +8,47 @@ weight: 20
 
 ### HTTP Headers
 
-当将入口的请求路由到终点目标时，终点收到 HTTP 请求方法和入口的一样，`nanhook` 会保留原始请求的标头、正文、查询字符串和路径。
+当将入口的请求路由到终点目标时，终点收到的 HTTP 请求方法默认和入口一样，`nanhook` 会保留原始请求的标头、正文、查询字符串和路径。
 下面列出了此规则的更详细详细信息：
 
-`终点网址` 不是第三方服务商时，除了请求的原始标头之外，`nanhook` 还添加了以下标头：
+除了请求的原始标头之外，`nanhook` 在每个 HTTP 请求添加了以下标头：
 
 <table>
   <thead>
     <tr>
-      <th>header</th>
+      <th>标头名称</th>
       <th>说明</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-        <td>X-Nanhook-Trace-Id</td>
-        <td>追踪 id，用于调试和故障排除</td>
+        <td>X-Nanhook-Delivery-Id</td>
+        <td>派送 id，对于每个事件而言都是唯一的，可用于防范重放攻击</td>
     </tr>
     <tr>
         <td>X-Nanhook-Attempt-Count</td>
-        <td>派送尝试计数</td>
+        <td>重新派送时，尝试的次数</td>
     </tr>
+  </tbody>
+</table>
+
+当 `终点网址` 不是第三方服务商时，`nanhook` 在每个 HTTP 请求还添加了以下标头：
+
+<table>
+  <thead>
+    <tr>
+      <th>标头名称</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
         <td>X-Nanhook-Connecting-Ip</td>
         <td>连接到入口的客户端 IP</td>
     </tr>
     <tr>
-        <td>X-Nanhook-Source-Id</td>
-        <td>入口 id</td>
+        <td>X-Nanhook-Source-Provider</td>
+        <td>入口的验证方式</td>
     </tr>
     <tr>
         <td>X-Nanhook-Source-Http-Method</td>
@@ -48,10 +61,6 @@ weight: 20
     <tr>
         <td>X-Nanhook-Source-Url-Query</td>
         <td>入口的 url query 参数</td>
-    </tr>
-    <tr>
-        <td>X-Nanhook-Source-Verify</td>
-        <td>入口是否身份验证</td>
     </tr>
   </tbody>
 </table>
@@ -75,11 +84,16 @@ weight: 20
 
 ### 验证
 
-可以选择性地对请求进行身份验证。
+可以选择性地对请求进行身份验证。`nanhook` 支持的通用身份验证选项：
 
-`nanhook` 支持的通用身份验证选项：基本身份验证 `Basic Auth`、`API Key` 和 `Bearer Token`，涵盖了大多数身份验证需求。
-此外，`nanhook` 还内置支持许多第三方服务商的身份验证。
-有关第三方服务商的完整列表，请参阅[终点第三方身份验证提供商](/docs/manual/authentication/#终点身份验证)。
+* 基本身份验证 `basic auth`
+* API 密钥验证 `api key`
+* 持票人令牌验证 `Bearer token`
+* 密钥散列消息验证 `hmac`
+
+涵盖了大多数身份验证需求。
+
+此外，`nanhook` 还内置支持许多第三方服务商的身份验证。有关第三方服务商的完整列表，请参阅[终点第三方身份验证提供商](/docs/manual/authentication/#终点身份验证)。
 
 配置终点请求的身份验证:
 
