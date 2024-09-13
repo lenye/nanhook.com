@@ -48,6 +48,136 @@ weight: 30
 
 当次数设置为零时，取消自动重试策略。
 
+### 请求标头
+
+在 HTTP 请求发送到终点服务器之前需要添加和删除的标头。
+[HTTP 标头参考文档](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers)
+
+![](/docs/manual/route_request_headers.png)
+
+#### 添加标头
+
+将在终端服务器 HTTP 请求添加一个标头。
+
+例如：
+
+> 配置添加标头
+
+```
+foo: value
+```
+
+> 入口 HTTP 请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+```
+
+> 终点服务器的请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: value
+```
+
+#### 删除标头
+
+如果删除具有多个值的标题，则所有值都将被删除。
+
+例如：
+
+> 配置删除标头
+
+```
+foo
+```
+
+> 入口 HTTP 请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: value1
+foo: value2
+```
+
+> 终点服务器的请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+```
+
+#### 替换已存在的标头
+
+例如：
+
+> 配置删除标头
+
+```
+foo
+```
+
+> 配置添加标头
+
+```
+foo: new-value
+```
+
+> 入口 HTTP 请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: original-value
+```
+
+> 终点服务器的请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: new-value
+```
+
+#### 添加已存在的标头，它将再添加一个标头
+
+例如：
+
+> 配置添加标头
+
+```
+foo: new-value
+```
+
+> 入口 HTTP 请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: original-value
+```
+
+> 终点服务器的请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: original-value
+foo: new-value
+```
+
+#### 区分大小写
+
+添加和删除的标头时，`nanhook` 将不区分大小写的匹配任何标头。
+
+#### 特殊情况
+
+* 不能添加或删除用户代理标头 `User-Agent`。
+* 不能添加或删除主机标头 `Host`。
+
 ### 删除
 
 路由删除将不再传递 webhook 事件。
