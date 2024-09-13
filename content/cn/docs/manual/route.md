@@ -82,6 +82,33 @@ host: q.nanhook.com
 foo: value
 ```
 
+##### 添加已存在的标头，它将再添加一个标头
+
+例如：
+
+> 配置添加标头
+
+```
+foo: new-value
+```
+
+> 入口 HTTP 请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: original-value
+```
+
+> 终点服务器的请求
+
+```
+GET / HTTP/1.1
+host: q.nanhook.com
+foo: original-value
+foo: new-value
+```
+
 #### 删除标头
 
 如果删除具有多个值的标题，则所有值都将被删除。
@@ -142,33 +169,6 @@ host: q.nanhook.com
 foo: new-value
 ```
 
-#### 添加已存在的标头，它将再添加一个标头
-
-例如：
-
-> 配置添加标头
-
-```
-foo: new-value
-```
-
-> 入口 HTTP 请求
-
-```
-GET / HTTP/1.1
-host: q.nanhook.com
-foo: original-value
-```
-
-> 终点服务器的请求
-
-```
-GET / HTTP/1.1
-host: q.nanhook.com
-foo: original-value
-foo: new-value
-```
-
 #### 区分大小写
 
 添加和删除的标头时，`nanhook` 将不区分大小写的匹配任何标头。
@@ -177,6 +177,11 @@ foo: new-value
 
 * 不能添加或删除用户代理标头 `User-Agent`。
 * 不能添加或删除主机标头 `Host`。
+
+#### 配置限制
+
+* 需要添加的标头列表最多 5 个。
+* 需要删除的标头列表最多 5 个。
 
 ### 删除
 
