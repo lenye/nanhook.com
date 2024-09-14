@@ -23,7 +23,7 @@ weight: 20
   <tbody>
     <tr>
         <td>X-Nanhook-Delivery-Id</td>
-        <td>派送 id，对于每个事件而言都是唯一的，可用于防范重放攻击</td>
+        <td>派送编号，对于每个事件而言都是唯一的，可用于防范重放攻击</td>
     </tr>
     <tr>
         <td>X-Nanhook-Attempt-Count</td>
